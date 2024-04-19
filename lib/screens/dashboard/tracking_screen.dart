@@ -176,11 +176,20 @@ class _TrackingScreenState extends State<TrackingScreen> {
           ),
           content: BorderContainer(
               containerOpacity: 0.03,
-              content: Row(
+              content: Column(
                 children: [
-                  Expanded(child: Text("Enjoy 🤗.", style: body)),
-                  Gap(tweleve),
-                  Text(getCurrentTime(), textAlign: TextAlign.end, style: body)
+                  Row(
+                    children: [
+                      Expanded(child: Text("Enjoy 🤗.", style: body)),
+                      Gap(tweleve),
+                      Text(getCurrentTime(),
+                          textAlign: TextAlign.end, style: body)
+                    ],
+                  ),
+                  Image.asset(
+                    "assets/rate_us.png",
+                    height: 50,
+                  )
                 ],
               )),
         )
